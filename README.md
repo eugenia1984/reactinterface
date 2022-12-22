@@ -1,4 +1,4 @@
-## :star2: Curso de LinekedIn Learning : React.js: creando interface (de Ray Villalobos)
+## :star2: Curso de LinkedIn Learning : React.js: creando interface (de Ray Villalobos)
 
 En este curso de LinkedInLearning cree una interface con React.
 
@@ -16,10 +16,14 @@ En este curso de LinkedInLearning cree una interface con React.
 
 ---
 
-## :box:  Demo
+##  Demo
 
 
+---
 
+## Teoría
+
+Pueden encontrarla en el archivo [**TEORIA.md**].
 
 ---
 
