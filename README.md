@@ -23,7 +23,7 @@ En este curso de LinkedInLearning cree una interface con React.
 
 ## Teoría
 
-Pueden encontrarla en el archivo [**TEORIA.md**].
+Pueden encontrarla en el archivo [**TEORIA.md**](https://github.com/eugenia1984/reactinterface/blob/main/TEORIA.md).
 
 ---
 
