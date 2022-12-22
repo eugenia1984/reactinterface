@@ -10,7 +10,7 @@
 
 - Herramientas: **React Developer Tools** (n el navegador que utilices) y **React Snippets** (extension de VSC) y **JS/JSX Snippets**
 
-- Para la instalación del proyesto se utiliza  [**create-react-app**](https://create-react-app.dev/), si ya la tenías instalada globalmente, para trabajar con la versión más actual es recomendable desinstalarla con: ```npm uninstall -g create-react-app```. Sujiere porner el proyecto en el escritorio, pero se puede guardar donde se prefiera. Entonces por consola:
+- Para la instalación del projecto se utiliza  [**create-react-app**](https://create-react-app.dev/), si ya la tenías instalada globalmente, para trabajar con la versión más actual es recomendable desinstalarla con: ```npm uninstall -g create-react-app```. Sujiere porner el proyecto en el escritorio, pero se puede guardar donde se prefiera. Entonces por consola:
 ```
 npx create-react-app reactinterface
 cd reactinterface
@@ -21,9 +21,107 @@ Creo la aplicación de React llamada **reactinterface**, entro a la carpeta crea
 
 - Modulos de React: **Webpack** (un bundle de JavaScript, ensamblador de la aplicaicón), **Babel** (compilador a JavaScript, pudiendo escribir con ES6 o más y se convertirá para los navegadores con ES5 o anteriores), **ES Lint** (analiza el código con ciertas reglas y ayuda a fixear, hay una extensión en VSC), **Jest** es un framework de test, **Webvital** (para ver la performance, la accesibilidad y las buenas prácticas).
 
+- Se utiliza **JSX**, or lo que vemos **calssName** en vez de **class**, las etiquetas deben ser auto conclusivas (por eso la de imagen se cierra), por ejemplo.
+
+- Utilizo [**React Icons**](https://react-icons.github.io/react-icons/), [el link a npm](https://www.npmjs.com/package/react-icons) y tengo un codigo de ejemplo:
+
+```JSX
+import { FaBeer } from "react-icons/fa";
+
+function Question() {
+  return (
+    <h3>
+      {" "}
+      Lets go for a <FaBeer />?{" "}
+    </h3>
+  );
+}
+```
+
+Al importarlo luego de la / se aclara de que libreria se va a utilizar, el del ejemplo es FA de favicon, si es /bs es de bootstrap, por ejemplo.
+
+Se instala con la terminal: ```npm install react-icons --save```
+
+
+- Para los estilos se utiliza [***TailwindCSS**](https://tailwindcss.com/docs/guides/create-react-app), en el video utiliza con Craco, pero en la documentacion indican:
+
+1. Intalacion: ```npm install -D tailwindcss postcss autoprefixer```
+
+2. Correr el comando ```npx tailwindcss init -p``` para inicializar los archivos tailwind.config.js and postcss.config.js.
+
+
+3. En tailwind.config.js agregamos todos los path de los tempaltes
+```
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+4. En **index.css**  agregar los directorios de Tailwind.
+
+```
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+5. Correr el proyecto: ```npm run start```
+
+6. Usar Tailwind en el poyecto, un ejemplo:
+
+App.js
+```JSX
+export default function App() {
+  return (
+    <h1 className="text-3xl font-bold underline">
+      Hello world!
+    </h1>
+  )
+}
+```
+
+*tip*: **All of the examples in Tailwind UI rely on the default Tailwind CSS configuration, but some rely on additional first-party plugins like** ```npm install @tailwindcss/forms```, ```npm install  @tailwindcss/typography``` **, and** ```npm install @tailwindcss/aspect-ratio```.
+
+Tailwind UI for React depends on Headless UI to power all of the interactive behavior and Heroicons for icons, so you'll need to add these two libraries to your project:
+
+```npm install @headlessui/react @heroicons/react```
+
+-> En el video lo hace de este modo:
+
+```npm install -D tailwindcss@npm:@tailwindcss/postcss7-compat @tailwindcss/postcss7-compart postcss@^7 autoprefixer@^9 @tailwindcss/forms```
+
+Y usa CRACO (create react app configuration override) lo que va a ser es modificar los scripts, usa: ```npm install @craco```
+
+Y en package.json en la parte de scripts cambia npm por **craco**
+
+Y crea un archivo de configuración de craco:
+
+```JSX
+// craco.config.js
+module.exports = {
+  style: {
+    postcss: {
+      plugins: [
+        require("tailwindss"),
+        require("autoprefixer",)
+      ],
+    },
+  },
+}
+```
+
+
 ---
 
 ## :star: Empezando
+
 
 ---
 

@@ -16,6 +16,24 @@ En este curso de LinkedInLearning cree una interface con React.
 
 ---
 
+## Dependencias
+
+```
+"react": "^18.2.0",
+"react-dom": "^18.2.0",
+"react-icons": "^4.7.1",
+"react-scripts": "5.0.1",
+```
+### Dependencias de desarrollo
+
+```
+"autoprefixer": "^10.4.13",
+"postcss": "^8.4.20",
+"tailwindcss": "^3.2.4"
+```
+
+---
+
 ##  Demo
 
 
